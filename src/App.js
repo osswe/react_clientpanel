@@ -6,6 +6,7 @@ import Dashboard from './components/layout/Dashboard';
 import AddClient from './components/clients/AddClient';
 import EditClient from './components/clients/EditClient';
 import Login from './components/auth/Login';
+import Settings from './components/settings/Settings';
 import ClientDetails from './components/clients/ClientDetails';
 import { UserIsAuthenticated, UserIsNotAuthenticated } from './helpers/auth';
 
@@ -24,6 +25,7 @@ class App extends Component {
             <div className="container">
               <Switch>
                 <Route exact path="/" component={ UserIsAuthenticated(Dashboard) } />
+                <Route exact path="/settings" component={ UserIsAuthenticated(Settings) } />
                 <Route exact path="/client/add" component={ UserIsAuthenticated(AddClient) } />
                 <Route exact path="/client/edit/:id" component={ UserIsAuthenticated(EditClient) } />
                 <Route exact path="/client/:id" component={ UserIsAuthenticated(ClientDetails) } />
