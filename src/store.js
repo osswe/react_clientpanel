@@ -4,16 +4,9 @@ import 'firebase/firestore';
 import { reactReduxFirebase, firebaseReducer } from 'react-redux-firebase';
 import { reduxFirestore, firestoreReducer } from 'redux-firestore';
 // Reducers
-// @todo
+import notifyReducer from './reducers/notifyReducer';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyB3ENFqbymdvhEwCs51MZ3mc2WLWBSfgMg",
-  authDomain: "reactclientpanel111.firebaseapp.com",
-  databaseURL: "https://reactclientpanel111.firebaseio.com",
-  projectId: "reactclientpanel111",
-  storageBucket: "reactclientpanel111.appspot.com",
-  messagingSenderId: "201491854675"
-};
+//@todo: firebaseConfig goes here
 
 // react-redux-firebase options
 const rrfConfig = {
@@ -38,7 +31,8 @@ const createStoreWithFirebase = compose(
 // Add firebase to reducers
 const rootReducer = combineReducers({
   firebase: firebaseReducer,
-  firestore: firestoreReducer
+  firestore: firestoreReducer,
+  notify: notifyReducer
 });
 
 // create initial state
