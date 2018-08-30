@@ -40,7 +40,8 @@ class Settings extends Component {
             <form>
               <div className="form-group">
                 <label>Allow Registration</label>{ ' ' }
-                <input type="checkbox" name="allowRegistration" checked={ !!allowRegistration } onChange={ this.allowRegistrationChange } />
+                <input type="checkbox" name="allowRegistration" checked={ !!allowRegistration }
+                  onChange={ this.allowRegistrationChange } />
               </div>
               <div className="form-group">
                 <label>Disable Balance on Add</label>{ ' ' }
