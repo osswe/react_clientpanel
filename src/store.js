@@ -10,6 +10,7 @@ import settingsReducer from './reducers/settingsReducer';
 //@todo: firebaseConfig goes here
 
 
+
 // react-redux-firebase options
 const rrfConfig = {
   userProfile: 'users', // firebase root where user profiles are stored
@@ -38,8 +39,20 @@ const rootReducer = combineReducers({
   settings: settingsReducer
 });
 
+if (localStorage.getItem('settings') == null) {
+  // set defaults
+  const defaultSettings = {
+    disableBalanceOnAdd: true,
+    disableBalanceOnEdit: false,
+    allowRegistration: false,
+  }
+
+  localStorage.setItem('settings', JSON.stringify(defaultSettings));
+}
+
 // create initial state
-const initialState = {};
+const initialState = { settings: JSON.parse(localStorage.getItem('settings')) };
+
 const store = createStoreWithFirebase(rootReducer, initialState, compose(
   reactReduxFirebase(firebase),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
