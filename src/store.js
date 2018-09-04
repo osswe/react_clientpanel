@@ -8,7 +8,14 @@ import notifyReducer from './reducers/notifyReducer';
 import settingsReducer from './reducers/settingsReducer';
 
 //@todo: firebaseConfig goes here
-
+const firebaseConfig = {
+  apiKey: "AIzaSyDXm5qpnt1pcACos3Sh1tOymlFXy9oFAM0",
+  authDomain: "reactclientpanel111.firebaseapp.com",
+  databaseURL: "https://reactclientpanel111.firebaseio.com",
+  projectId: "reactclientpanel111",
+  storageBucket: "reactclientpanel111.appspot.com",
+  messagingSenderId: "201491854675"
+};
 
 
 // react-redux-firebase options
