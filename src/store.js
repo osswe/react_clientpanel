@@ -7,7 +7,7 @@ import { reduxFirestore, firestoreReducer } from 'redux-firestore';
 import notifyReducer from './reducers/notifyReducer';
 import settingsReducer from './reducers/settingsReducer';
 
-//@todo: firebaseConfig goes here
+
 
 
 
